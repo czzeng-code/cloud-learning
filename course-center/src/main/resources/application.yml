@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: course-center
+  datasource:
+    url: jdbc:mysql://120.25.149.156:3306/db_zeng?serverTimezone=Asia/Shanghai
+#    url: jdbc:mysql://39.98.143.134:3306/db_s?serverTimezone=Asia/Shanghai
+#    username: root
+#    password: abc.123
+    hikari:
+      username: root
+      password: suroot
+      driver-class-name: com.mysql.cj.jdbc.Driver
+server:
+  port: 8030
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-components: always
